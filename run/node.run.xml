@@ -4,13 +4,13 @@
       <settings>
         <option name="imageTag" value="node-vue-study-img" />
         <option name="containerName" value="node-vue-study-cont" />
-        <option name="commandLineOptions" value="-u1000:1000 -w/app -it" />
+        <option name="commandLineOptions" value="-u1000:1000 -w/app -it --network host" />
         <option name="sourceFilePath" value="images/node/Dockerfile" />
         <option name="volumeBindings">
           <list>
             <DockerVolumeBindingImpl>
               <option name="containerPath" value="/app" />
-              <option name="hostPath" value="$PROJECT_DIR$/www" />
+              <option name="hostPath" value="$PROJECT_DIR$/app" />
             </DockerVolumeBindingImpl>
           </list>
         </option>
