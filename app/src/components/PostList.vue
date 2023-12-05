@@ -1,6 +1,9 @@
 <script>
 
+import PostItem from "@/components/PostItem.vue";
+
 export default {
+  components: {PostItem},
   props: {
     posts: {
       type: Array,
@@ -11,16 +14,9 @@ export default {
 </script>
 
 <template>
-  <ul>
-    <li v-for="post in posts">
-      <p>
-        {{ post.title }}
-      </p>
-      <p>
-        {{ post.body }}
-      </p>
-    </li>
-  </ul>
+    <div v-for="post in posts">
+      <post-item :post="post"></post-item>
+    </div>
 </template>
 
 <style scoped>
