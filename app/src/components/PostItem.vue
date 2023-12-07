@@ -26,7 +26,7 @@ export default {
     {{ this.post.body }}
   </p>
   <div>
-    <MyButton>Удалить</MyButton>
+    <MyButton @click="$emit('remove', post.id)">Удалить</MyButton>
   </div>
 </div>
 </template>

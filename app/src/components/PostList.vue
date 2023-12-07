@@ -9,13 +9,18 @@ export default {
       type: Array,
       require: true
     }
+  },
+  methods: {
+    remove(data) {
+      this.$emit('removePost',data)
+    }
   }
 }
 </script>
 
 <template>
     <div v-for="post in posts">
-      <post-item :post="post"></post-item>
+      <post-item :post="post" :key="post.id" @remove="remove"></post-item>
     </div>
 </template>
 
