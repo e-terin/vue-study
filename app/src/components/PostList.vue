@@ -19,9 +19,15 @@ export default {
 </script>
 
 <template>
+  <div v-if="posts.length >0 ">
     <div v-for="post in posts">
       <post-item :post="post" :key="post.id" @remove="remove"></post-item>
     </div>
+  </div>
+  <div v-else>
+    Список пользователей пуст
+  </div>
+
 </template>
 
 <style scoped>
