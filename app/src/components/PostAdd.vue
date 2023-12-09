@@ -37,7 +37,7 @@ export default {
             </label>
           </div>
           <div class="md:w-2/3">
-            <MyInput v-model="post.title"></MyInput>
+            <MyInput v-model.trim="post.title"></MyInput>
             </div>
         </div>
         <div class="md:flex md:items-center mb-6">
